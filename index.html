@@ -9,33 +9,45 @@
 <body>
     <div class="container">
         <div class="image-layout">
-            <img src="/images/purple-mountain.jpg" alt="Mount view with purple sky" id="img1">
-            <img src="/images/logo-falcon.png" alt="Blue falcon logo" id="img2">
+            <div class="logo">
+                <img src="/images/odin-lined.png" alt="Odin logo" id="img2">
+                <div>
+                    ODIN
+                </div>     
+            </div>
         </div>
         <div class="form-layout">
             <div class="header-container">
-                <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <strong>now</strong> to get started</h1>
+                <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <strong>now</strong> to get started.</h1>
                 <h2>You know you want to.</h2>
             </div>
             <form action="path" method="post">
                 <h3>Let's do this!</h3>
-                <label for="name">First name</label>
-                <input type="text" id="name" name="name">
-
-                <label for="last_name">Last name</label>
-                <input type="text" id="last_name" name="last_name">
-
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email">
-
-                <label for="phone">Phone number</label>
-                <input type="number" id="phone" name="phone">
-
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password">
-
-                <label for="confirm_password">Confirm password</label>
-                <input type="password" id="confirm_password" name="confirm_password">
+                <div class="form-group">
+                    <label for="name">First name</label>
+                    <input type="text" id="name" name="name">
+                </div>
+                <div class="form-group">
+                    <label for="last_name">Last name</label>
+                    <input type="text" id="last_name" name="last_name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" id="email" name="email">
+                </div>
+                <div class="form-group">
+                    <label for="phone">Phone number</label>
+                    <input type="number" id="phone" name="phone">
+                </div>
+                <div class="form-group">
+                    <label for="password">Password</label>
+                    <input type="password" id="password" name="password">
+                </div>
+                <div class="form-group">
+                    <label for="confirm_password">Confirm password</label>
+                    <input type="password" id="confirm_password" name="confirm_password">
+                </div>
+                </ul>
             </form>
             <div class="button-section">
                 <button type="submit">Create Account</button>
