@@ -15,46 +15,71 @@
                     ODIN
                 </div>     
             </div>
+            <div class="credits">
+                Photo by <a href="https://unsplash.com/@j_mk18?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+                Jon </a> on <a href="https://unsplash.com/photos/landscape-photography-of-mountains-r8AFUpRp0J0?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">
+                Unsplash</a>
+            </div>
         </div>
         <div class="form-layout">
             <div class="header-container">
-                <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <strong>now</strong> to get started.</h1>
-                <h2>You know you want to.</h2>
+                <h1>This is not a real online service! You know you need something like this in your life to help you realize your deepest dreams.<br>Sign up <em>now</em> to get started.</h1>
+                <h2>You <em>know</em> you want to.</h2>
             </div>
-            <form action="path" method="post">
+            <form action="/action_page.php" method="post">
                 <h3>Let's do this!</h3>
                 <div class="form-group">
                     <label for="name">First name</label>
-                    <input type="text" id="name" name="name">
+                    <input type="text" id="name" name="name" />
                 </div>
                 <div class="form-group">
                     <label for="last_name">Last name</label>
-                    <input type="text" id="last_name" name="last_name">
+                    <input type="text" id="last_name" name="last_name" />
                 </div>
                 <div class="form-group">
                     <label for="email">Email</label>
-                    <input type="email" id="email" name="email">
+                    <input type="email" id="email" name="email" />
                 </div>
                 <div class="form-group">
                     <label for="phone">Phone number</label>
-                    <input type="number" id="phone" name="phone">
+                    <input type="number" id="phone" name="phone" />
                 </div>
                 <div class="form-group">
-                    <label for="password">Password</label>
-                    <input type="password" id="password" name="password">
+                    <label for="Password">Password</label>
+                    <input type="password" id="Password" name="Password" />
+                    <span id="Message" class="pw-message"></span>
                 </div>
                 <div class="form-group">
-                    <label for="confirm_password">Confirm password</label>
-                    <input type="password" id="confirm_password" name="confirm_password">
+                    <label for="Confirm_password">Confirm password</label>
+                    <input type="password" id="Confirm_password" name="Confirm_password" />
                 </div>
-                </ul>
             </form>
             <div class="button-section">
-                <button type="submit">Create Account</button>
-                <p>Already have an account? <a href="">Log in</a></p>
+                <input class="sub-btn" type="submit" value="Create Account" onClick="passConfirm()"/>
+                <p class="login-para">Already have an account? <a href="" class="login">Log in</a></p>
             </div>
         </div>
         
     </div>
+    <script>
+        var passConfirm = function() {
+            const message = document.getElementById("Message");
+            const password = document.getElementById("Password");
+            const passwordConfirm = document.getElementById("Confirm_password")
+        if (password.value && passwordConfirm.value) { 
+            if (password.value == passwordConfirm.value ) {
+            message.classList.remove("pw-message-error")
+            message.classList.add("pw-message-success")
+            message.innerHTML = "Success!"
+        } else {
+          message.classList.remove("pw-message-success")
+          message.classList.add("pw-message-error")
+          password.style.border = "1px solid #ed8f94"
+          passwordConfirm.style.border = "1px solid #ed8f94"
+          message.innerHTML = "* Passwords do not match!"
+            }
+        }  
+      }
+    </script>
 </body>
 </html>
